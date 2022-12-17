@@ -37,7 +37,7 @@
         3. out_ready指示乘法器是否需要保持当前输出状态，用于流水线暂停时防止乘法器结果流失，如果为0，则下一拍上升沿时乘法器保持out输出，out_valid为1。
         4. out_ready与out_valid之间不可存在组合逻辑。
 
-    - `div`：除法器测试，需要乘法器按照以下interface编写，并保存到`core/mul.sv`：
+    - `div`：除法器测试，需要乘法器按照以下interface编写，并保存到`core/div.sv`：
 
         ```sv
         typedef enum {
