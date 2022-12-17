@@ -77,3 +77,7 @@
                 - 使用`make riscv-test-build`进行编译，如果报错需要排查，建议先`rm -rf riscv-test`以及`rm -rf riscv-test`，打开Makefile一条条手动运行。
                 - 运行`./run_riscv_test.py`执行测试
                 - 如果测试不通过，观察错误的测试点，例如测试点为`rv64mi-p-ma_fetch`，可以使用以下命令单独运行并输出波形图：`./obj_dir/Vtop_axi_wrapper ./tests-bin/rv64mi-p-ma_fetch.bin -rvtest -trace 10000`
+
+## 备注
+
+如果能够自己按照其他逻辑设计乘除法器，可以不用进行乘除法器单元测试。
