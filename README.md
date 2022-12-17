@@ -1,5 +1,10 @@
 # CO-LAB-RISCV Template
 
+## 可参考的资料
+
+- [https://co.ccslab.cn/rv/intro/](https://co.ccslab.cn/rv/intro/)
+- [cqu-simple-core](https://github.com/cyyself/cyyrv64/tree/cqu_simple_core)
+
 ## 目录说明
 
 - `core` 存放你的核的代码，你可以不使用框架，仅需要确保最外层模块名为`top_axi_wrapper`，且信号一致即可。
@@ -58,7 +63,7 @@
     - test_workbench 运行整个核的测试框架
         - `soft` 在你的CPU核上运行的软件，默认为一个串口输出的演示程序，具体可以查看Makefile。
         - `sim`：整合[soc-simulator](https://github.com/cyyself/soc-simulator)与[cemu](https://github.com/cyyself/cemu)的文件，提供Verilator运行环境。
-        
+
             - 编译CPU核到Verilator
 
                 直接`make`，编译后结果为`./obj_dir/Vtop_axi_wrapper`，会在与CEMU差分测试的情况下运行soft。
