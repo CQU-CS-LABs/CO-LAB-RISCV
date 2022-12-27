@@ -66,10 +66,13 @@
 
             - 编译CPU核到Verilator
 
-                直接`make`，编译后结果为`./obj_dir/Vtop_axi_wrapper`，会在与CEMU差分测试的情况下运行soft。
+                直接`make`，编译后结果为`./obj_dir/Vtop_axi_wrapper`。
+            - 运行soft中简单的代码（默认为类似Hello World打印RISC-V Logo）
+
+                执行`./obj_dir/Vtop_axi_wrapper`，若不带`-rvtest`则会加载`../soft/start.bin`，这一过程大家可以阅读`test/test_workbench/sim/src/sim_mycpu.cpp`的代码。
             - 波形图调试
 
-                执行`./obj_dir/Vtop_axi_wrapper -trace [TRACE_TIME]`，其中`[TRACE_TIME]`替换为波形图输出时间，可以为`1000000000`。
+                执行`./obj_dir/Vtop_axi_wrapper -trace [TRACE_TIME]`，其中`[TRACE_TIME]`替换为波形图输出时间，可以为`1000000000`。波形图会输出到`trace.vcd`文件，可以使用gtkwave打开。
             - RISC-V Tests
 
                 - 首先确保已经编译riscv工具链，且已加入环境变量PATH，前缀为`riscv64-unknown-linux-gnu-`
